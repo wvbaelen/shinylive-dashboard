@@ -13,11 +13,11 @@ bill_rng = (min(tips.total_bill), max(tips.total_bill))
 # Add page title and sidebar
 ui.page_opts(title="Restaurant tipping", fillable=True)
 
-with ui.sidebar( open="desktop"):
+with ui.sidebar(open="desktop"):
     ui.input_slider(
         "total_bill",
         "Bill amount",
-        min=     bill_rng[0],
+        min=bill_rng[0],
         max=bill_rng[1],
         value=bill_rng,
         pre="$",
