@@ -48,7 +48,7 @@ with ui.layout_columns(fill=False):
             tips_data().shape[0]
 
     with ui.value_box(showcase=ICONS["wallet"]):
-        "Average tip"
+        "Average tip!"
 
         @render.express
         def average_tip():
