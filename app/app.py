@@ -13,11 +13,11 @@ bill_rng = (min(tips.total_bill), max(tips.total_bill))
 # Add page title and sidebar
 ui.page_opts(title="Restaurant tipping", fillable=True)
 
-with ui.sidebar(open="desktop"):
+with ui.sidebar( open="desktop"):
     ui.input_slider(
         "total_bill",
         "Bill amount",
-        min=bill_rng[0],
+        min=     bill_rng[0],
         max=bill_rng[1],
         value=bill_rng,
         pre="$",
@@ -41,14 +41,14 @@ ICONS = {
 
 with ui.layout_columns(fill=False):
     with ui.value_box(showcase=ICONS["user"]):
-        "Total tippers!"
+        "Total tippers"
 
         @render.express
         def total_tippers():
             tips_data().shape[0]
 
     with ui.value_box(showcase=ICONS["wallet"]):
-        "Average tip!"
+        "Average tip"
 
         @render.express
         def average_tip():
@@ -58,7 +58,7 @@ with ui.layout_columns(fill=False):
                 f"{perc.mean():.1%}"
 
     with ui.value_box(showcase=ICONS["currency-dollar"]):
-        "Average bill!"
+        "Average bill"
 
         @render.express
         def average_bill():
