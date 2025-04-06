@@ -58,7 +58,7 @@ with ui.layout_columns(fill=False):
                 f"{perc.mean():.1%}"
 
     with ui.value_box(showcase=ICONS["currency-dollar"]):
-        "Average bill"
+        "Average bill!"
 
         @render.express
         def average_bill():
