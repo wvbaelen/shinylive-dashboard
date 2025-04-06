@@ -41,7 +41,7 @@ ICONS = {
 
 with ui.layout_columns(fill=False):
     with ui.value_box(showcase=ICONS["user"]):
-        "Total tippers"
+        "Total tippers!"
 
         @render.express
         def total_tippers():
